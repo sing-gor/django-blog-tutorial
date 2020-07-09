@@ -1,0 +1,236 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    .site-layout {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .site-header {
+
+      flex: 0 0 auto;
+    }
+
+    .site-main {
+
+      flex: 1 0 auto;
+    }
+
+    .site-footer {
+
+      flex: 0 0 auto;
+    }
+
+    /* footer */
+    .site-footer-bg-dark {
+      background-color: #343a40 !important;
+      background: radial-gradient(ellipse farthest-corner at 100% 150%, #000 20%, transparent 60%);
+    }
+
+    .site-footer-data {
+      color: #ffffff;
+    }
+
+    a.site-fotter-color {
+      color: #fa983a;
+    }
+
+    .list-group-item {
+      position: relative;
+      display: block;
+      padding: .75rem 1.25rem;
+      background-color: #fff;
+      border: none;
+    }
+  </style>
+  <title>Posts | YuSing's Blog</title>
+</head>
+
+<body>
+  <div class="site-layout">
+    <header class="site-header bg-dark">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand h1" href="{% url 'home' %}">YuSing's Blog</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'article_index' %}">Posts <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Series</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+            </ul>
+
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main container mt-4">
+
+      {% if falsh.status == False %}
+
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Holy guacamole!</strong> {{ falsh.text }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {% endif %}
+      <div class="row">
+        <article class="col-8">
+
+
+          <div class="post-list mt-4">
+            <h2>Posts </h2>
+            <hr>
+            <div class="row row-cols-1 row-cols-md-2 mt-3">
+              {% for each in articles %}
+              <!-- start articles -->
+              <div class="col mb-4">
+                <div class="card h-100">
+
+                  <div class="card-body">
+                    <h5 class="card-title"> <a href="{% url 'article_show' each.id %}">{{ each.title }}</a></h5>
+                    {{ each.body | safe | truncatewords:5 }}
+                  </div>
+                </div>
+              </div>
+              <!-- end articles -->
+              {% empty %}
+              <div class="jumbotron w-100  mx-auto">
+                <h2>
+                  暂无内容
+                </h2>
+                <p class="lead">
+                  敬请期待
+                </p>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </article>
+        <aside class="col-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title text-primary">About Me</h5>
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-action">
+                  <p class="">Email: yusing-wong@outlook.com </p>
+
+                </li>
+                <li class="list-group-item list-group-item-action">
+                  <a href='https://github.com/sing-gor' target="_blank" class="">GitHub: github.com/sing-gor </a>
+
+                </li>
+                <li class="list-group-item list-group-item-action">
+                  <a href="http://wongyusing.com/" target="_blank" class="">Blog: wongyusing.com </a>
+
+                </li>
+
+              </ul>
+
+            </div>
+          </div>
+          <div class="card mb-4">
+            <div class="card-body ">
+              <h5 class="card-title text-primary">Category</h5>
+              <div class="list-group w-100">
+                <a href="https://docs.python.org/3/" target="_blank" class="list-group-item list-group-item-action">Python</a>
+                <a href="https://www.typescriptlang.org/docs/home.html" target="_blank" class="list-group-item list-group-item-action">TypeScript</a>
+                <a href="https://www.w3schools.com/js/" target="_blank" class="list-group-item list-group-item-action">JavaScript</a>
+                <a href="http://gobook.io/read/github.com/lunny/gopl-zh/" class="list-group-item list-group-item-action ">GoLang</a>
+                <a href="http://lrthw.github.io/" target="_blank" class="list-group-item list-group-item-action ">Ruby</a>
+                <a href="https://elixirschool.com/en/" target="_blank" class="list-group-item list-group-item-action ">Elixir (正在学习)</a>
+                <a href="https://racket-lang.org/" target="_blank" class="list-group-item list-group-item-action ">Racket (正在学习)</a>
+
+                <a href="https://www.w3schools.com/html/default.asp" target="_blank" class="list-group-item list-group-item-action ">Html</a>
+                <a href="https://www.w3schools.com/css/default.asp" target="_blank" class="list-group-item list-group-item-action ">CSS</a>
+                <a href="https://www.runoob.com/linux/linux-file-content-manage.html" class="list-group-item list-group-item-action ">Ubuntu</a>
+                <a href="https://www.w3schools.com/sql/default.asp" target="_blank" class="list-group-item list-group-item-action ">Postgresql</a>
+                <a href="https://www.mongodb.com/" target="_blank" class="list-group-item list-group-item-action ">Mongodb</a>
+
+
+
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Tag Cloud</h5>
+
+              <a href="https://www.tornadoweb.org/en/stable/" target="_blank" class="list-group-item list-group-item-action">Tornado</a>
+              <a href="https://docs.djangoproject.com/en/2.2/" target="_blank" class="list-group-item list-group-item-action">Django</a>
+              <a href="https://ruby-china.github.io/rails-guides/v4.1/" target="_blank" class="list-group-item list-group-item-action">Rails</a>
+              <a href="https://angular.io/start" target="_blank" class="list-group-item list-group-item-action">Angular</a>
+              <a href="https://cn.vuejs.org/v2/guide/" target="_blank" class="list-group-item list-group-item-action">Vue</a>
+              <a href="https://gin-gonic.com/docs/quickstart/" target="_blank" class="list-group-item list-group-item-action">Gin</a>
+              <a href="https://v4.bootcss.com/docs/4.0/getting-started/introduction/" target="_blank" class="list-group-item list-group-item-action">Bootstrap4</a>
+              <a href="https://2.python-requests.org/en/master/" target="_blank" class="list-group-item list-group-item-action">Requests</a>
+              <a href="https://docs.scrapy.org/en/latest/" target="_blank" class="list-group-item list-group-item-action">Scrapy</a>
+              <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/" target="_blank" class="list-group-item list-group-item-action">Bs4</a>
+              <a href="http://lesscss.org/" target="_blank" class="list-group-item list-group-item-action">Less</a>
+              <a href="https://sass-lang.com/documentation" target="_blank" class="list-group-item list-group-item-action">Sass</a>
+              <a href="https://flask.palletsprojects.com/en/1.1.x/" target="_blank" class="list-group-item list-group-item-action">Flask</a>
+              <a href="https://goframe.org/index" target="_blank" class="list-group-item list-group-item-action">Go Frame</a>
+
+
+
+
+
+
+            </div>
+          </div>
+
+        </aside>
+      </div>
+
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer-bg-dark mt-4 mb-0 pb-4">
+        <div class="container">
+          <div class="row"></div>
+          <p class="text-center mt-4 site-footer-data">Copyright © 2018-2020 <a class="site-fotter-color" href="https://github.com/sing-gor">YuSing</a>. Powered by Django.</p>
+          <p class="text-center mt-4 site-footer-data">粤ICP备xxxxxxxx号</p>
+        </div>
+      </div>
+
+    </footer>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
