@@ -1,5 +1,6 @@
+
 <!doctype html>
-{% load static %}
+
 <html lang="en">
 
 <head>
@@ -58,7 +59,7 @@
       border: none;
     }
   </style>
-  <title>Posts | YuSing's Blog</title>
+  <title>人来人往 | YuSing's Blog</title>
 </head>
 
 <body>
@@ -66,7 +67,7 @@
     <header class="site-header bg-dark">
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand h1" href="{% url 'home' %}">YuSing's Blog</a>
+          <a class="navbar-brand h1" href="/">YuSing's Blog</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -74,10 +75,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'home' %}">Home </a>
+                <a class="nav-link" href="/">Home </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="{% url 'article_index' %}">Posts <span class="sr-only">(current)</span></a>
+                <a class="nav-link active" href="/articles/">Posts <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Series</a>
@@ -94,45 +95,59 @@
 
     <main class="site-main container mt-4">
 
-      {% if falsh.status == False %}
 
-      <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Holy guacamole!</strong> {{ falsh.text }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      {% endif %}
       <div class="row">
         <article class="col-8">
 
 
           <div class="post-list mt-4">
-            <h2>Posts </h2>
+            <h1>人来人往</h1>
             <hr>
             <div class="row row-cols-1 row-cols-md-2 mt-3">
-              {% for each in articles %}
-              <!-- start articles -->
-              <div class="col mb-4">
-                <div class="card h-100">
-
-                  <div class="card-body">
-                    <h5 class="card-title"> <a href="{% url 'article_show' each.id %}">{{ each.title }}</a></h5>
-                    {{ each.body | safe | truncatewords:5 }}
-                  </div>
-                </div>
-              </div>
-              <!-- end articles -->
-              {% empty %}
-              <div class="jumbotron w-100  mx-auto">
-                <h2>
-                  暂无内容
-                </h2>
-                <p class="lead">
-                  敬请期待
-                </p>
-              </div>
-              {% endfor %}
+              <p>朋友已走</p>
+<p>刚升职的你举杯到凌晨还未够</p>
+<p>用尽心机拉我手</p>
+<p>缠在我颈背后</p>
+<p>说你男友有事忙是借口</p>
+<p>说到终于饮醉酒</p>
+<p>情侣会走</p>
+<p>刚失恋的你哭干眼泪前来自首</p>
+<p>寂寞因此牵我手</p>
+<p>除下了他手信后</p>
+<p>我已得到你没有</p>
+<p>但你我至少往后</p>
+<p>成为了蜜友</p>
+<p>闭起双眼你最挂念谁</p>
+<p>眼睛张开身边竟是谁</p>
+<p>感激车站里</p>
+<p>尚有月台能让我们满足到落泪</p>
+<p>拥不拥有也会记住谁</p>
+<p>快不快乐留在身体里</p>
+<p>爱若能够永不失去</p>
+<p>何以你今天竟想找寻伴侣</p>
+<p>谁也会走</p>
+<p>刚相恋的你先知我们原来未够</p>
+<p>借故松开我的手</p>
+<p>藏在贴纸相背后</p>
+<p>我这苦心开过没有</p>
+<p>但试过散心旅游</p>
+<p>如何答没有</p>
+<p>闭起双眼我最挂念谁</p>
+<p>眼睛张开身边竟是谁</p>
+<p>感激车站里</p>
+<p>尚有月台曾让我们满足到落泪</p>
+<p>拥不拥有也会记住谁</p>
+<p>快不快乐有天总过去</p>
+<p>爱若为了永不失去</p>
+<p>谁勉强娱乐过谁</p>
+<p>爱若难以放进手里</p>
+<p>何不将这双手放进心里</p>
+<p>时间会走</p>
+<p>刚失恋的我开始与旁人携着手</p>
+<p>但甚么可以拥有</p>
+<p>缠在那颈背后</p>
+<p>最美丽长发未留在我手</p>
+<p>我也开心饮过酒</p>
             </div>
           </div>
         </article>

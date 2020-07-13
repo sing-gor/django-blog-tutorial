@@ -41,8 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'controllers.home.apps.HomeConfig',
-    'controllers.articles.apps.ArticlesConfig',
 
 ]
 

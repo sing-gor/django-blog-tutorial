@@ -1,5 +1,6 @@
+
 <!doctype html>
-{% load static %}
+
 <html lang="en">
 
 <head>
@@ -58,7 +59,7 @@
       border: none;
     }
   </style>
-  <title>{{ article.title }} | YuSing's Blog</title>
+  <title>天若有情 | YuSing's Blog</title>
 </head>
 
 <body>
@@ -66,7 +67,7 @@
     <header class="site-header bg-dark">
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand h1" href="{% url 'home' %}">YuSing's Blog</a>
+          <a class="navbar-brand h1" href="/">YuSing's Blog</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -74,10 +75,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'home' %}">Home </a>
+                <a class="nav-link" href="/">Home </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="{% url 'article_index' %}">Posts <span class="sr-only">(current)</span></a>
+                <a class="nav-link active" href="/articles/">Posts <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Series</a>
@@ -94,24 +95,57 @@
 
     <main class="site-main container mt-4">
 
-      {% if falsh.status == False %}
 
-      <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Holy guacamole!</strong> {{ falsh.text }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      {% endif %}
       <div class="row">
         <article class="col-8">
 
 
           <div class="post-list mt-4">
-            <h1>{{ article.title }}</h1>
+            <h1>天若有情</h1>
             <hr>
             <div class="row row-cols-1 row-cols-md-2 mt-3">
-              {{ article.body | safe }}
+              <p>原谅话也不讲半句</p>
+<p>此刻生命在凝聚</p>
+<p>过去你曾寻过</p>
+<p>某段失去了的声音</p>
+<p>落日远去人期望</p>
+<p>留住青春的一刹</p>
+<p>风雨思念置身梦里</p>
+<p>总会有唏嘘</p>
+<p>若果他朝此生不可与你</p>
+<p>哪管生命是无奈</p>
+<p>过去也曾尽诉</p>
+<p>往日心里爱的声音</p>
+<p>就像隔世人期望</p>
+<p>重拾当天的一切</p>
+<p>此世短暂转身步过</p>
+<p>萧刹了的空间</p>
+<p>只求望一望</p>
+<p>让爱火永远的高烧</p>
+<p>青春请你归来</p>
+<p>再伴我一会</p>
+<p>原谅话也不讲半句</p>
+<p>此刻生命在凝聚</p>
+<p>过去你曾寻过</p>
+<p>某段失去了的声音</p>
+<p>落日远去人期望</p>
+<p>留住青春的一刹</p>
+<p>风雨思念置身梦里</p>
+<p>总会有唏嘘</p>
+<p>只求望一望</p>
+<p>让爱火永远的高烧</p>
+<p>青春请你归来</p>
+<p>再伴我一会</p>
+<p>若果他朝此生不可与你</p>
+<p>哪管生命是无奈</p>
+<p>过去也曾尽诉</p>
+<p>往日心里爱的声音</p>
+<p>就像隔世人期望</p>
+<p>重拾当天的一切</p>
+<p>此世短暂转身步过</p>
+<p>萧刹了的空间</p>
+<p>此世短暂转身步过</p>
+<p>萧刹了的空间</p>
             </div>
           </div>
         </article>

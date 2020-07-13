@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <style>
     html,
     body {
@@ -59,7 +59,7 @@
       border: none;
     }
   </style>
-  <title>Posts | YuSing's Blog</title>
+  <title>Home | YuSing's Blog</title>
 </head>
 
 <body>
@@ -74,11 +74,11 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="/">Home </a>
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="/articles/">Posts <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/articles/">Posts</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Series</a>
@@ -99,6 +99,29 @@
       <div class="row">
         <article class="col-8">
 
+          <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+              <a href="http://127.0.0.1:8000/articles/1"><img src="/static/media/1.jpg" class="d-block w-100" alt="..."></a>
+              </div>
+              <div class="carousel-item">
+                <a href="http://127.0.0.1:8000/articles/2">  <img src="/static/media/2.jpg" class="d-block w-100" alt="..."></a>
+
+              </div>
+              <div class="carousel-item">
+                <img src="/static/media/3.jpg" class="d-block w-100" alt="...">
+                <a href="http://127.0.0.1:8000/articles/3"></a>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
 
           <div class="post-list mt-4">
             <h2>Posts </h2>
@@ -110,8 +133,8 @@
                 <div class="card h-100">
 
                   <div class="card-body">
-                    <h5 class="card-title"> <a href="/articles/1">后来</a></h5>
-                    <p>后来 我总算学会了如何去爱</p> <p>可惜你早已远去 消失在人海</p> <p>后来 …
+                    <h5 class="card-title">  <a href="/articles/1">后来</a></h5>
+                      <p>后来 我总算学会了如何去爱</p> <p>可惜你早已远去 消失在人海</p> <p>后来 …
                   </div>
                 </div>
               </div>
@@ -122,8 +145,8 @@
                 <div class="card h-100">
 
                   <div class="card-body">
-                    <h5 class="card-title"> <a href="/articles/2">突然的自我</a></h5>
-                    <p>听见你说，朝阳起又落</p> <p>晴雨难测，道路是脚步多</p> <p>我已习惯，你突然间的自我</p> <p>挥挥洒洒，将自然看通透</p> <p>那就不要留，时光一过不再有</p> …
+                    <h5 class="card-title">  <a href="/articles/2">突然的自我</a></h5>
+                      <p>听见你说，朝阳起又落</p> <p>晴雨难测，道路是脚步多</p> <p>我已习惯，你突然间的自我</p> <p>挥挥洒洒，将自然看通透</p> <p>那就不要留，时光一过不再有</p> …
                   </div>
                 </div>
               </div>
@@ -134,8 +157,8 @@
                 <div class="card h-100">
 
                   <div class="card-body">
-                    <h5 class="card-title"> <a href="/articles/3">人来人往</a></h5>
-                    <p>朋友已走</p> <p>刚升职的你举杯到凌晨还未够</p> <p>用尽心机拉我手</p> <p>缠在我颈背后</p> <p>说你男友有事忙是借口</p> …
+                    <h5 class="card-title">  <a href="/articles/3">人来人往</a></h5>
+                      <p>朋友已走</p> <p>刚升职的你举杯到凌晨还未够</p> <p>用尽心机拉我手</p> <p>缠在我颈背后</p> <p>说你男友有事忙是借口</p> …
                   </div>
                 </div>
               </div>
@@ -146,8 +169,8 @@
                 <div class="card h-100">
 
                   <div class="card-body">
-                    <h5 class="card-title"> <a href="/articles/4">天若有情</a></h5>
-                    <p>原谅话也不讲半句</p> <p>此刻生命在凝聚</p> <p>过去你曾寻过</p> <p>某段失去了的声音</p> <p>落日远去人期望</p> …
+                    <h5 class="card-title">  <a href="/articles/4">天若有情</a></h5>
+                      <p>原谅话也不讲半句</p> <p>此刻生命在凝聚</p> <p>过去你曾寻过</p> <p>某段失去了的声音</p> <p>落日远去人期望</p> …
                   </div>
                 </div>
               </div>
@@ -246,11 +269,9 @@
   </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 
 </html>
