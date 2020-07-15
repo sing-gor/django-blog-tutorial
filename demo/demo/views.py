@@ -7,7 +7,7 @@ from django.shortcuts import render
 # 定义一个名为home的函数，参数为 request 请求
 def home(request):
 
-    # 返回  根据请求渲染 home.html 文件
+    # 返回  渲染 home.html 文件 来响应这个请求
     return render(request,'home.html')
 
 def index(request):
