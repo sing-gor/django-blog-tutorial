@@ -1,8 +1,8 @@
 # 从django的快捷方法中 导入 渲染方法
 from django.shortcuts import render
-
 # 在这里创建你的视图
 # Create your views here.
+
 
 # 定义一个名为home的函数，参数为 request 请求
 def home(request):
